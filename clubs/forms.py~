@@ -1,0 +1,7 @@
+from django import forms
+from .models import Club
+
+class Play_Match(forms.Form):
+    winner = forms.IntegerField(widget=forms.TextInput(attrs={'size':10, 'maxlength':2}))
+    loser = forms.IntegerField(widget=forms.TextInput(attrs={'size':10, 'maxlength':2}))
+    

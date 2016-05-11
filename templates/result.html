@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<ol>
+
+<div class="img-with-text" style = "background-color: white;">
+	
+	<h4>		<span style="vertical-align: middle;" >{{ player_1.club_info.rank_score }}</span>
+    			<img src="{% static 'img/liverpool.jpg' %}" alt="sometext" style="vertical-align: middle; padding-right: 50px;" />
+			
+	</h4>     
+	
+
+	<h3 style= "padding-right: 10px;"> {{ player_1.club_info.club_name }} </h3>
+	<h3> <font size = "5px" ><b> {{ player_1.odds }}% : {{ player_2.odds }}% </b></font></h3>
+	 <h3 style = "padding-left: 10px;">{{ player_2.club_info.club_name }} </h3>
+
+	<h4>
+			
+    			<img src="{% static 'img/manchester.jpg' %}" alt="sometext" style="vertical-align: middle; padding-left: 50px;" />
+  			<span style="vertical-align: middle;" >{{ player_2.club_info.rank_score }}</span>
+			
+	</h4>
+	
+	<form method ="POST" action = "">  
+		{% csrf_token %}
+		{{ form.player_1 }}--vs--{{ form.player_2 }}
+	<br><br>
+	<input type = "submit" value= "submit">
+	</form>
+</div>
+
+
+{% endblock %}

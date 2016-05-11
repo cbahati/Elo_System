@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<ol>
+
+<div class="img-with-text" style = "background-color: white;">
+	
+	<h4>		<span style="vertical-align: middle;" >1800</span>
+    			<img src="{% static 'img/liverpool.jpg' %}" alt="sometext" style="vertical-align: middle; padding-right: 50px;" />
+			
+	</h4>     
+	
+
+	<h3 style= "padding-right: 10px;"> Real Madrid </h3>
+	<h3> <font size = "5px"><b> 70% : 30% </b></font></h3>
+	 <h3 style = "padding-left: 10px;"> Barcelona</h3>
+
+	<h4>
+			
+    			<img src="{% static 'img/manchester.jpg' %}" alt="sometext" style="vertical-align: middle; padding-left: 50px;" />
+  			<span style="vertical-align: middle;" >1900</span>
+			
+	</h4>
+	
+	<form method ="POST" action = "">  
+		{% csrf_token %}
+		{{ form.player_1 }}--vs--{{ form.player_2 }}
+	<input type = "submit" value= "submit">
+	</form>
+</div>
+
+<div id = "profile" style = "margin-left: 150px; margin-top:30px;" class = "pull-left">
+      
+	<p> Player Name: Chris</p>
+	<p> Competition form guide: WWDLDWW</p>
+	<p> Most Played Team: Napoli</p> 	
+    
+    	
+    </div>
+<div id = "profile" style = "margin-right: 150px; margin-top:30px;" class = "pull-right">
+     
+	<p> Player Name: John</p> 
+	<p> Competition form guide: WWDLDWW</p>
+	<p> Most Played Team: Madrid</p>
+    
+    	
+    </div>
+
+<center>
+
+
+</center>
+{% endblock %}

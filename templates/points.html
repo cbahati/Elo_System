@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<ol>
+
+<div class="img-with-text" style = "background-color: white;">
+	
+<h4>		<span style="vertical-align: middle;" >{{ player_1.club_info.rank_score }}</span>
+    			<img src="{% static 'img/liverpool.jpg' %}" alt="sometext" style="vertical-align: middle; padding-right: 50px;" />
+			
+	</h4>     
+	
+
+	<h3 style= "padding-right: 10px;"> {{ player_1.club_info.club_name }} </h3>
+	<h3> <font size = "5px" color = "green" ><b> + {{ player_1.points_gained }}</b></font> 
+		: 
+	     <font size = "5px" color = "red" ><b> -{{ player_2.points_lost }} </b></font></h3>
+	 <h3 style = "padding-left: 10px;">{{ player_2.club_info.club_name }} </h3>
+		
+	<h4>
+			
+    			<img src="{% static 'img/manchester.jpg' %}" alt="sometext" style="vertical-align: middle; padding-left: 50px;" />
+  			<span style="vertical-align: middle;" >{{ player_2.club_info.rank_score }}</span>
+			
+	</h4>
+</div>
+
+<a href="{% url 'fixtures' %}">Fixtures</a>
+
+{% endblock %}

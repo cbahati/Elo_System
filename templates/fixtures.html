@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="table-responsive" >
+            <table class="table table-striped" >
+	<tbody>
+{% for club in fixtures %}
+ 
+	<tr>
+	<td align = "center">
+	<!-- <p style = "float: left;">
+	hello <br> world <br> this <br> worked!
+
+	</p>
+-->
+	<div class="img-with-text">
+	
+	<h4>		
+			<span style="vertical-align: middle;" >{{club.0}}</span>
+    			<img src="{% static 'img/liverpool.jpg' %}" alt="Image Not Found!" style="vertical-align: middle;" />
+
+	</h4>     
+	
+
+	<h3>vs</h3>
+
+	
+	<h4>
+    			<img src="{% static 'img/manchester.jpg' %}" alt="Image Not Found" style="vertical-align: middle;" />
+    			<span style="vertical-align: middle;">{{club.1}}</span>
+	</h4>
+	
+           
+	<p style = "float: right; background-color: #003399;">
+ 	    <a href="{% url 'calculator' club.0 club.1 %}"> MORE </a>
+	</p>  
+		</div>
+	        
+	</td>
+        </tr>
+         
+
+{% endfor %}    
+</tbody>
+            </table>
+          </div>
+ 	 <center> <p style = "float: center; background-color:white;">
+ 	   <b> <a  href="{% url 'session' %}"> New Fixtures </a> </b>
+	</p>  
+  	</center>
+{% endblock %}

@@ -1,0 +1,123 @@
+body {
+    padding-top: 75px;
+    /*background-color:#003D66;*/
+    
+}
+
+.starter-template {
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: left;
+    background-color:white;
+}
+
+.starter-template a{
+    padding: 5px;
+}
+
+.navbar {
+    /*background-color:#680013;*/
+    /*background-color:#003399;*/
+    background-color:##333;
+
+}
+
+.navbar .searchbar {
+    padding-top: 12px;
+    padding-right: 10px;
+}
+
+#sidebar{
+    margin-left: 5px;
+    /*padding: 45px 15px;*/
+    width: 550px;
+    float: center;
+    /*background-color: #f7f7f7;*/ 
+    background-color: red;
+    font: "Shift", sans-serif;
+    font-weight: bold
+}
+#sidebar p{
+	background-color: #f7f7f7;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.profile {
+    padding: 40px 15px;
+    background-color: #f7f7f7; 
+    width: 235px;
+    padding: 10px;
+}
+
+.group-nav ul {
+    padding-top: 20px;
+    width: 645px;
+    background-color: #f7f7f7;
+    padding-bottom: 20px;
+}
+
+.group-nav li {
+    margin-left: 30px;
+    display: inline;
+    background-color: #f7f7f7;
+}
+.sub-header {
+  padding-top: 30px;
+  padding-bottom: 10px; 
+}
+
+
+.img-with-text {
+    text-align: center;
+    width: 73;
+}
+
+}
+.img-with-text img {
+    
+    margin: 0 auto;
+    display: inline-block;
+}
+.img-with-text h4 {
+    font-size: 15px;
+    display: inline-block;
+
+}
+.img-with-text h3 {
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+	
+}
+
+.img-with-text a {
+    color: white;
+}
+
+
+}
+a, figure {
+    display: inline-block;
+    padding-right: 4px;
+    font-size: 5;
+
+}
+figcaption {
+    margin: 10px 0 0 0;
+    font-variant: small-caps;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+.caption {
+    display: block;
+}

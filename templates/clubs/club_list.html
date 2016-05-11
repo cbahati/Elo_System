@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class ="starter-template">
+<ol>
+<h2 class="sub-header">League Standings</h2>
+
+<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+		  <th>^</th>
+                  <th>Club</th>
+                  <th>Wins</th>
+		  <th>Draws</th>
+		  <th>Loss</th>
+		<th>G</th>
+		<th>GA</th>
+		<th>GD</th>
+		<th>rating</th>
+                </tr>
+              </thead>
+              <tbody>
+
+{% for club in object_list %}
+	{% if club.rank < 4 %}
+        <tr style="background-color: #99ff99;">
+	{% else %}
+	<tr>
+	{% endif %}
+            <td><b>{{ club.rank }}</b></td>
+	{% if club.rank > club.last_rank %}
+	    <td><b><font color = red >{{ club.rank_difference }}</font></b></td>
+	{% elif club.rank < club.last_rank %}
+	    <td><b><font color = green >{{ club.rank_difference }}</font></b></td>
+	{% else %}
+            <td><b>{{ club.rank_difference }}</b></td>
+	{% endif %}
+            <td><b>{{ club.club_name }}</b></td>
+            <td><b>{{ club.wins }}</b></td>
+            <td><b>{{ club.draws }}</b></td>
+	    <td><b>{{ club.loss }}</b></td>
+	    <td><b>{{ club.goal_for}}</b></td>
+	    <td><b>{{ club.goal_against}}</b></td>
+	    <td><b>{{ club.goal_difference}}</b></td>
+	    <td><b>{{ club.rank_score }}</b></td>
+    	</tr>
+
+	{% endfor %}
+</tbody>
+            </table>
+          </div>
+    
+
+</ol>
+</div>
+{% endblock %}
