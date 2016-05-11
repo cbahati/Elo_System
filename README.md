@@ -6,8 +6,8 @@ of similar skills together.
 
 ## Screenshots
 
-<img src="http://i.imgur.com/H5InHaU.png" height="400px">
-<img src= "http://i.imgur.com/nXYTdwc.png" height="400px">
+<img src="http://i.imgur.com/H5InHaU.png?1" height="400px">
+<img src= "http://i.imgur.com/nXYTdwc.png?1" height="400px">
 
 ## Requirements:
 
