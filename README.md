@@ -20,10 +20,14 @@ git clone git://github.com/cbahati/Elo_System.git
 
 ## Getting Started
 
-
-## Usage
-
+-To run the development server just type
+ - "python manage.py runserver" 
+ - you may need to reset the database and remove all migrations to start fresh
+The ELO algorithm module is located within the "clubs" directory
 
 ## TODO
+- This project is still a work in progress, most of the changes needed are to the aesthetic of the site HTML, CSS, etc..
+- Get the team banner model and directory set up properly
+- Fix slight Bug when 2 teams are tied which substract the wrong amount of point from the team with highest ELO
 
  
